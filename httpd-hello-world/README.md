@@ -7,7 +7,7 @@ Assuming you already have Docker installed, to build the container, run:
 
     $ docker build -t mywebsite .
 
-This will pull the Apache HTTP server image from Docker Hub and build. Then, to run the container:
+This will pull the [Apache HTTP server image from Docker Hub][httpd] and build. Then, to run the container:
 
     $ docker run -p 8080:80 mywebsite
 
@@ -15,9 +15,9 @@ The container will start, and you can then access the website at `http://localho
 
 ## Build and deploy in OpenShift
 
-We can't use the regular `Dockerfile`, because it uses the `httpd` image, which runs as root.
+We can't use the regular `Dockerfile`, because it uses the `httpd` image, which runs as root. This isn't generally allowed in OpenShift.
 
-So there's a separate `Dockerfile.openshift` for OpenShift. This uses the Apache image from the Red Hat registry instead, which runs as a non-root user.
+So there's a separate `Dockerfile.openshift` specifically for OpenShift. It uses the Apache HTTP Server image from the Red Hat registry instead (`registry.redhat.io/rhscl/httpd-24-rhel7`), which runs as a non-root user.
 
 ### Using the template provided
 
@@ -43,4 +43,6 @@ The `oc new-app` command won't expose the app to the outside world. So, to acces
 You can now get the URL to the app, using:
 
     oc get route mywebsite --template '{{.spec.host}}'
+
+[httpd]: https://hub.docker.com/_/httpd
 
