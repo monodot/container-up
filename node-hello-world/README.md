@@ -13,7 +13,7 @@ The app will now start on <http://localhost:3000>
 
 If you hit <http://localhost:3000/greeting> you'll get a greeting:
 
-    $ curl localhost:3000
+    $ curl localhost:3000/greeting
     {"greeting":"Hello, world!"}
 
 ## Put it in a container
