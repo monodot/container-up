@@ -1,3 +1,3 @@
-FROM httpd:2.4
-COPY ./public_html/ /usr/local/apache2/htdocs/
+FROM bitnami/apache:latest
+COPY ./public_html/ /app
 
