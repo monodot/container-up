@@ -10,3 +10,5 @@ A set of demos showing how to build and run different types of software in conta
 
 There's a readme file in each directory containing more information.
 
+![rainbows](https://media.giphy.com/media/1qRGjsKqspSwM/giphy.gif)
+
