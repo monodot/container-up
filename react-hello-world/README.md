@@ -28,7 +28,7 @@ Now start a container from the image:
 
 You'll be able to access the website at <http://localhost:8080/>.
 
-![screenshot](screenshot.gif)
+![screenshot](screenshot.png)
 
 ## Build and deploy in OpenShift
 
