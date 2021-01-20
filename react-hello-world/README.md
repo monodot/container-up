@@ -32,7 +32,13 @@ You'll be able to access the website at <http://localhost:8080/>.
 
 ## Build and deploy in OpenShift
 
-You can run a Docker build and then deploy in OpenShift using `oc new-app`:
+To build and deploy in OpenShift, apply the template which I've provided in this repo:
+
+    oc process -f openshift-template.yml | oc apply -f -
+
+This also shows how you can provide some runtime configuration to the React app. The approach here is to add configuration into a ConfigMap. Then, at runtime, the ConfigMap is mounted into the container. Finally, the HTML page which runs in the user's browser reads this config file. Try changing the values in the ConfigMap and see what happens!
+
+If you don't want to use a template, you can run a Docker build and deploy in OpenShift using `oc new-app`:
 
     oc new-app https://github.com/monodot/container-up --name=react-hello-world --context-dir=react-hello-world
 
