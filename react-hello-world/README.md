@@ -28,10 +28,19 @@ Now start a container from the image:
 
 You'll be able to access the website at <http://localhost:8080/>.
 
+![screenshot](screenshot.gif)
+
+## Build and deploy in OpenShift
+
+You can run a Docker build and then deploy in OpenShift using `oc new-app`:
+
+    oc new-app https://github.com/monodot/container-up --name=react-hello-world --context-dir=react-hello-world
+
+    oc expose svc/react-hello-world
+
 ## Acknowledgements
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 No Kylie records were harmed in the making of this project.
-
 
