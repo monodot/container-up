@@ -1,6 +1,10 @@
 # react-hello-world
 
+**Psst!** There's a blog post to go with this example: <https://www.tutorialworks.com/kubernetes/openshift/deploy-react-app/>
+
 A simple React front-end application, ready to be built in a container.
+
+---
 
 To run tests:
 
