@@ -18,16 +18,20 @@ Now you can access the service at <http://localhost:8080>, e.g.:
 
     $ curl localhost:8080/posts
     [
-    {
-        "id": 1,
-        "title": "json-server",
-        "author": "typicode"
-    }
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
+        }
     ]
 
 ## Deploy to OpenShift
 
 You can build using the **Source-to-Image (S2I)** strategy, using the **Add** screen in the OpenShift web console, choosing **From Git** and then pointing to this Git repo.
+
+Or you can use the OpenShift Template provided:
+
+    oc process -f openshift-template.yml | oc apply -f -
 
 Or, use the `oc` command line tool:
 
